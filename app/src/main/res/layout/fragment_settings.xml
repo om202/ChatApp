@@ -3,15 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.SettingsFragment">
+    tools:context=".Fragments.SettingsFragment"
+    android:padding="32dp"
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Settings"
-        android:gravity="center"
-        android:textSize="32sp"
+        android:textSize="18sp"
         android:textStyle="bold"/>
+
 
 </RelativeLayout>

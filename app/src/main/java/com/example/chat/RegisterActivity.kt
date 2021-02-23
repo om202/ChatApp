@@ -43,7 +43,7 @@ class RegisterActivity : AppCompatActivity() {
     private fun registerUser() {
         val name: String = name_register.text.toString()
         val email: String = email_register.text.toString()
-        val password: String = password_login.text.toString()
+        val password: String = password_register.text.toString()
 
         when {
             name == "" -> {

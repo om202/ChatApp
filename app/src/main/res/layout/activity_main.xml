@@ -34,6 +34,15 @@
                 android:layout_marginStart="26dp">
 
             </TextView>
+
+            <Button
+                android:id="@+id/logout_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Logout" />
+
         </androidx.appcompat.widget.Toolbar>
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
