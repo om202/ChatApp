@@ -17,21 +17,21 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary">
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginRight="8dp"
-                android:src="@drawable/profile"
                 android:tint="@color/white">
             </de.hdodenhof.circleimageview.CircleImageView>
             <TextView
                 android:id="@+id/user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/user_name"
+                android:text="loading..."
                 android:textSize="18sp"
-                android:layout_marginLeft="26dp"
+                android:layout_marginLeft="16dp"
                 android:textColor="@color/white"
-                android:layout_marginStart="26dp">
+                android:layout_marginStart="16dp">
 
             </TextView>
 
@@ -39,8 +39,9 @@
                 android:id="@+id/logout_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="32dp"
                 android:text="Logout" />
 
         </androidx.appcompat.widget.Toolbar>

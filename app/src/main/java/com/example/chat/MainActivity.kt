@@ -11,6 +11,7 @@ import androidx.viewpager.widget.ViewPager
 import com.example.chat.Fragments.ChatsFragment
 import com.example.chat.Fragments.SearchFragment
 import com.example.chat.Fragments.SettingsFragment
+import com.example.chat.ModelClasses.Users
 import com.google.android.material.tabs.TabLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -18,9 +19,11 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_message_chat.*
 
-class MainActivity : AppCompatActivity() {
+  class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -48,9 +51,11 @@ class MainActivity : AppCompatActivity() {
 
         // display the user name and profile picture on main activity
         refUser!!.addValueEventListener(object : ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if(snapshot.exists()){
-
+            override fun onDataChange(snapshotUser: DataSnapshot) {
+                if(snapshotUser.exists()){
+                    val user: Users? = snapshotUser.getValue(Users::class.java)
+                    user_name.text = user!!.getname()
+                    Picasso.get().load(user.getprofile()).into(profile_image)
                 }
             }
 
